@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MKL - Registrarse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Barra de avegacion -->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
+            <div class="container">
+              <img class="navbar-brand" src="img/LOGO MKL-01.png">
+              
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                                    
+
+                  <li class="nav-item">
+                    <a class="nav-link" style="color: white" href="index1.html">Inicio</a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link" style="color: white" href="iniciar-sesion.html">Iniciar Sesion</a>
+                  </li>
+
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: white" href="#" id="lineas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lineas</a>
+                    <div class="dropdown-menu dropdown-menu-right" style="background-color: #2271aa" readonly aria-labelledby="lineas">
+                      <a class="dropdown-item" style="color: white" href="">Catering</a>
+                      <a class="dropdown-item" style="color: white" href="">Hotel</a>
+                      <a class="dropdown-item" style="color: white" href="">Cotillon</a>
+                      <a class="dropdown-item" style="color: white" href="">Barra</a>
+                    </div>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link" style="color: white" href="preg-frec.html">Preguntas Frecuentes</a>
+                  </li>
+                 
+                </ul>
+              </div>
+          </div>
+    </nav>
+
+
+ <!-- Page Content -->
+ <div class="container pt-5 ">
+   <article class="header mt-5 ">
+
+
+  <!-- Contact Form -->
+      <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+      <div class="row">
+          <div class="col-lg-7 mx-auto">
+              <div class="card card-signin my-5 ">
+                  <div class="card-body"><h3 class="text-center">Registrarse</h3>
+            <hr class="my-4">
+            <form name="sentMessage" id="contactForm" novalidate>
+              <div class="control-group form-group">
+                <div class="controls">
+                  <label>Nombre y Apellido:</label>
+                  <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name." placeholder="Nombre y Apellido">
+                  <p class="help-block"></p>
+                </div>
+              </div>
+              <div class="control-group form-group">
+                <div class="controls">
+                  <label>Celular:</label>
+                  <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number." placeholder="+54 11">
+                </div>
+              </div>
+              <div class="control-group form-group">
+                <div class="controls">
+                  <label>Email:</label>
+                  <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address." placeholder="example@example.com">
+                </div>
+              </div>
+              <div class="control-group form-group">
+                  <div class="controls">
+                    <label>Direccion:</label>
+                    <input type="direccion" class="form-control" id="direccion" required data-validation-required-message="Please enter your phone number." placeholder="Av. San Martin 123">
+                  </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                      <label>Localidad:</label>
+                      <input type="localidad" class="form-control" id="localidad" required data-validation-required-message="Please enter your phone number." placeholder="C.A.B.A.">
+                    </div>
+                  </div>
+                  <div class="control-group form-group">
+                      <div class="controls">
+                        <label>Provincia:</label>
+                        <input type="provincia" class="form-control" id="provincia" required data-validation-required-message="Please enter your phone number." placeholder="Buenos Aires">
+                      </div>
+                    </div>
+              <div class="control-group form-group">
+                  <div class="controls">
+                    <label>Usuario:</label>
+                    <input type="usuario" class="form-control" id="usuario" required data-validation-required-message="Please enter your phone number." placeholder="">
+                  </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                      <label>Password:</label>
+                      <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your phone number." placeholder="">
+                    </div>
+                  </div>
+              <div id="success"></div>
+              <!-- For success/fail messages -->
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
+            </form>
+                  </div>
+          </div>
+        </div>
+      </div>
+        <!-- /.row -->
+    </article>
+  
+  </div>
+  <!-- /.container -->
+
+
+    <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Pafelu 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>     
+</body>
+</html>
