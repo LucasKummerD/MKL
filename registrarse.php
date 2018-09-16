@@ -86,40 +86,46 @@
               </div>
               <div class="control-group form-group">
                   <div class="controls">
+                    <label>CUIT/CUIL:</label>
+                    <input type="Cuit" class="form-control" id="cuit" required data-validation-required-message="No igresó la su CUIT/CUIL." placeholder="xx-xxxxxxxx-x">
+                  </div>
+              </div>
+              <div class="control-group form-group">
+                  <div class="controls">
                     <label>Dirección:</label>
-                    <input type="direccion" class="form-control" id="direccion" required data-validation-required-message="Please enter your phone number." placeholder="Av. San Martin 123">
+                    <input type="direccion" class="form-control" id="direccion" required data-validation-required-message="No ingresó su Dirección." placeholder="Av. San Martin 123">
                   </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                      <label>Localidad:</label>
-                      <input type="localidad" class="form-control" id="localidad" required data-validation-required-message="Please enter your phone number." placeholder="C.A.B.A.">
-                    </div>
+              </div>
+              <div class="control-group form-group">
+                  <div class="controls">
+                    <label>Localidad:</label>
+                    <input type="localidad" class="form-control" id="localidad" required data-validation-required-message="No ingresó su Localidad." placeholder="C.A.B.A.">
                   </div>
-                  <div class="control-group form-group">
-                      <div class="controls">
-                        <label>Provincia:</label>
-                        <input type="provincia" class="form-control" id="provincia" required data-validation-required-message="Please enter your phone number." placeholder="Buenos Aires">
-                      </div>
-                    </div>
+              </div>
+              <div class="control-group form-group">
+                  <div class="controls">
+                    <label>Provincia:</label>
+                    <input type="provincia" class="form-control" id="provincia" required data-validation-required-message="No igresó su Provincia." placeholder="Buenos Aires">
+                  </div>
+              </div>
               <div class="control-group form-group">
                   <div class="controls">
                     <label>Usuario:</label>
-                    <input type="usuario" class="form-control" id="usuario" required data-validation-required-message="Please enter your phone number." placeholder="">
+                    <input type="usuario" class="form-control" id="usuario" required data-validation-required-message="No ingresó su Usuario." placeholder="">
                   </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                      <label>Contraseña:</label>
-                      <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your phone number." placeholder="">
-                    </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                      <label>Repetir Contraseña:</label>
-                      <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your phone number." placeholder="">
-                    </div>
-                </div>
+              </div>
+              <div class="control-group form-group">
+                  <div class="controls">
+                    <label>Contraseña:</label>
+                    <input type="password" class="form-control" id="password" required data-validation-required-message="No igresó su Passoword." placeholder="">
+                  </div>
+              </div>
+              <div class="control-group form-group">
+                  <div class="controls">
+                    <label>Repetir Contraseña:</label>
+                    <input type="password" class="form-control" id="password" required data-validation-required-message="Su Password no coincide." placeholder="">
+                  </div>
+              </div>
               <div id="success"></div>    
               <button type="submit" class="btn" style="background-color: #338bca" id="sendMessageButton">Registrarse</button>
             </form>
@@ -155,8 +161,8 @@
     <p class="footer-company-name pl-4 pt-5">Copyright &copy; PaFeLu 2018</p>  
   </div>
   <div class="footer-center">
-    <div class="mr-5 mt-4">
-      <a href="https://www.google.com/maps" target="_blank"><img src="img/maps.png" title="Location" width=100%></a>
+    <div class="mapa">
+          <a href="https://www.google.com.ar/maps/place/MKL+Distribuidora/@-34.4716678,-58.5172767,15z/data=!4m2!3m1!1s0x0:0xe06cfdfb6a46f0ed?sa=X&ved=2ahUKEwje5dvNjbzdAhXMkZAKHeOrBl0Q_BIwDnoECAoQCw" target="_blank"><img src="img/mapa.jpg" title="Location" width=70%></a>
     </div>
   </div>
   <div class="footer-right">
