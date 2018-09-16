@@ -1,21 +1,39 @@
 body {
-    padding-top: 54px;
+    padding-top: 30px;
   }
   
   @media (min-width: 992px) {
     body {
-      padding-top: 56px;
+      padding-top: 150px;
     }
   }
 
+  /*--------- Header-------------*/
+
+ 
+  .navbar-brand{
+	width: 230px;
+    float: left;
+
+  }
+
   .carousel-item {
-    height: 65vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
+	/* padding-top: 100px;*/
+    height: 600px;
+    min-height: 250px;
+    background: no-repeat bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+  }
+
+  /*------- PRODUCTOS DESTACADOS ---------- */
+
+  .container {
+	font-family: Verdana, sans-serif;
+	text-align: center;
+	text-decoration-color: rgb(3, 96, 136);
   }
 
 

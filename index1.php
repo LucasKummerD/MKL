@@ -22,7 +22,7 @@
 <!-- Barra de navegacion -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
             <div class="container">
-              <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-01.png">              
+              <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-02.png">              
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button> 
@@ -68,24 +68,24 @@
     <!-- Slide  Uno-->
           <div class="carousel-item active" style="background-image: url('img/Carrousel-1.jpg');">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Primer Slide</h3>
-              <p>This is a description for the first slide.</p>
+              <h3></h3>
+              <p></p>
             </div>
           </div>
 
     <!-- Slide Dos -->
           <div class="carousel-item" style="background-image: url('img/Carrousel-2.jpg');">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Segundo Slide</h3>
-              <p>This is a description for the second slide.</p>
+              <h3></h3>
+              <p></p>
             </div>
           </div>
 
     <!-- Slide Tres -->
           <div class="carousel-item" style="background-image: url('img/Carrousel-3.jpg');">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Tercer Slide</h3>
-              <p>This is a description for the third slide.</p>
+              <h3></h3>
+              <p></p>
             </div>
           </div>
         </div>
@@ -106,17 +106,17 @@
 <!-- Contenido -->
 <!-- Productos -->
 
-    <div class="container">
-        <h1 class="my-4 py-4">Productos Destacados</h1>
+    <div class="container h6">
+        <h1 class="my-4 py-4"><strong>PRODUCTOS DESTACADOS</h1>
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="img/Foto-1.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Uno</a>
+                <a href="#">COMBO 1</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+              <p class="card-text">Ofrecemos la decoracion y mobiliarios para el interperie que se adaptan perfectamente a la tematica que propongas para tu fiesta</p>
             </div>
           </div>
         </div>
@@ -126,9 +126,9 @@
             <a href="#"><img class="card-img-top" src="img/Foto-2.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Dos</a>
+                <a href="#">COMBO 2</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">Nos adaptamos a todos los gustos, por eso si tenes que organizar baby showers, cumpleaños o bautismos, tenemos este combo preparado para que tu fiesta tenga la mejor estetica</p>
             </div>
           </div>
         </div>
@@ -138,81 +138,81 @@
             <a href="#"><img class="card-img-top" src="img/Foto-3-01.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Tres</a>
+                <a href="#">COMBO 3</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+              <p class="card-text">Si necesitas que la noche sea perfecta, tenemos para vos un combo donde todo brilla. Desde lucas led, hasta mobiliarios luminosos para hacer de tu fiesta un gran evento inolvidable</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="img/Foto-1.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="img/Foto -4.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Cuatro</a>
+                <a href="#">PRODUCTO 4</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+              <p class="card-text">Tu bebida cobra vida con los hielos luminosos, son totalmente inofensivos. Podes utilizarlos para niños y adultos. Se pueden seleccionar manualmente 4 colores a eleccion o dejarlo en opcion random y convertir tu bebida en una fiesta.</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="img/Foto-2.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="img/Foto -5-05.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Cinco</a>
+                <a href="#">PRODUCTO 5</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">Las sillas son siempre un problema para trasladar, si en tu fiesta no sabes cuanta gente viene, està opcion te salva. Sillas plegables, faciles de trasladar, irrompibles.</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="img/Foto-3-01.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="img/Foto -6-06.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Seis</a>
+                <a href="#">PRODUCTO 6</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+              <p class="card-text">Vos solo encargate de disfrutar, te ofrecemos telas para tu decoración con tratamiento ignifugo. No arriesgues tu fiesta, confiá en los que saben</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="img/Foto-1.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="img/Barra -07.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Siete</a>
+                <a href="#">PRODUCTO 7</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+              <p class="card-text">No escatimes en la bebida! Nuestras barras son la mejores. Y lo más importante, nunca se quedan sin bebida.</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="img/Foto-2.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="img/Living cheto-08.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Ocho</a>
+                <a href="#">PRODUCTO 8</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">Los living con estilos, son para gente con estilo. Si tu fiesta es elegante y queres intimidar a todos tus invitados recreamos un VIP en donde la exclusividad será solo para algunos</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="img/Foto-3-01.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="img/Sillas Tiffani-09.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Producto Nueve</a>
+                <a href="#">PRODUCTO 9</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+              <p class="card-text">Las sillas visten la mesa, si queres resaltar y salir de lo convencional, te ofrecemos lo mejor de lo mejor.</p>
             </div>
           </div>
         </div>
@@ -244,10 +244,15 @@
         <p class="footer-company-name pl-4 pt-5">Copyright &copy; PaFeLu 2018</p>  
       </div>
       <div class="footer-center">
-        <div class="mapa">
+
+
+ 
+      <div class="mapa">
           <a href="https://www.google.com.ar/maps/place/MKL+Distribuidora/@-34.4716678,-58.5172767,15z/data=!4m2!3m1!1s0x0:0xe06cfdfb6a46f0ed?sa=X&ved=2ahUKEwje5dvNjbzdAhXMkZAKHeOrBl0Q_BIwDnoECAoQCw" target="_blank"><img src="img/mapa.jpg" title="Location" width=70%></a>
         </div>
       </div>
+
+    
       <div class="footer-right pt-4">
         <p class="footer-company-about">
           <span>Sobre Nosotros</span>
