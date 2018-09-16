@@ -1,3 +1,10 @@
+<?php 
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +18,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
 <body>
+  
 <!-- Barra de navegacion -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
         <div class="container">
@@ -21,16 +29,16 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                  <a class="nav-link" style="color: white" href="index1.html">Inicio</a>
+                  <a class="nav-link" style="color: white" href="index1.php">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color: rgb(179, 195, 228)" href="registrarse.html">Registrarse</a>
+                <a class="nav-link" style="color: rgb(179, 195, 228)" href="registrarse.php">Registrarse</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color: white" href="iniciar-sesion.html">Iniciar Sesion</a>
+                <a class="nav-link" style="color: white" href="iniciar-sesion.php">Iniciar Sesion</a>
               </li>
                 <li class="nav-item">
-                <a class="nav-link" style="color: white" href="preg-frec.html">Preguntas Frecuentes</a>
+                <a class="nav-link" style="color: white" href="preg-frec.php">Preguntas Frecuentes</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" style="color: white" href="#" id="lineas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lineas</a>

@@ -1,5 +1,11 @@
+<?php 
+
+
+?>
+
+
 <!DOCTYPE html>
-<html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +17,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
 <body>
+
+
 <!-- Barra de navegacion -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
             <div class="container">
@@ -21,16 +29,16 @@
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link" style="color: rgb(179, 195, 228)" href="index1.html">Inicio</a>
+                      <a class="nav-link" style="color: rgb(179, 195, 228)" href="index1.php">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style="color: white" href="registrarse.html">Registrarse</a>
+                    <a class="nav-link" style="color: white" href="registrarse.php">Registrarse</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style="color: white" href="iniciar-sesion.html">Iniciar Sesion</a>
+                    <a class="nav-link" style="color: white" href="iniciar-sesion.php">Iniciar Sesion</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style="color: white" href="preg-frec.html">Preguntas Frecuentes</a>
+                    <a class="nav-link" style="color: white" href="preg-frec.php">Preguntas Frecuentes</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color: white" href="#" id="lineas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lineas</a>
@@ -46,36 +54,43 @@
           </div>
     </nav>
     <header>
-      <div  id="carousel" class="carousel slide" data-ride="carousel">
-<!-- carousel -->         
+
+
+    <!-- carousel --> 
+      <div  id="carousel" class="carousel slide" data-ride="carousel">      
         <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
           <li data-target="#carousel" data-slide-to="1"></li>
           <li data-target="#carousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
+
     <!-- Slide  Uno-->
-          <div class="carousel-item active" style="background-image: url('file:///C:/xampp/htdocs/Web%20nueva/img/Carrousel-1.jpg')">
+          <div class="carousel-item active" style="background-image: url('img/Carrousel-1.jpg');">
             <div class="carousel-caption d-none d-md-block">
               <h3>Primer Slide</h3>
               <p>This is a description for the first slide.</p>
             </div>
           </div>
+
     <!-- Slide Dos -->
-          <div class="carousel-item" style="background-image: url('file:///C:/xampp/htdocs/Web%20nueva/img/Carrousel-2.jpg')">
+          <div class="carousel-item" style="background-image: url('img/Carrousel-2.jpg');">
             <div class="carousel-caption d-none d-md-block">
               <h3>Segundo Slide</h3>
               <p>This is a description for the second slide.</p>
             </div>
           </div>
+
     <!-- Slide Tres -->
-          <div class="carousel-item" style="background-image: url('file:///C:/xampp/htdocs/Web%20nueva/img/Carrousel-3.jpg')">
+          <div class="carousel-item" style="background-image: url('img/Carrousel-3.jpg');">
             <div class="carousel-caption d-none d-md-block">
               <h3>Tercer Slide</h3>
               <p>This is a description for the third slide.</p>
             </div>
           </div>
         </div>
+
+        <!-- Flechas Carousel -->
         <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -86,6 +101,7 @@
         </a>
       </div>
     </header>
+
 
 <!-- Contenido -->
 <!-- Productos -->
@@ -104,6 +120,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="img/Foto-2.jpg" alt=""></a>
@@ -115,6 +132,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="img/Foto-3-01.jpg" alt=""></a>
@@ -138,6 +156,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="img/Foto-2.jpg" alt=""></a>
@@ -149,6 +168,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="img/Foto-3-01.jpg" alt=""></a>
@@ -172,6 +192,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="img/Foto-2.jpg" alt=""></a>
@@ -183,6 +204,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="img/Foto-3-01.jpg" alt=""></a>
@@ -197,6 +219,7 @@
     </div>
   </div>
         
+
 <!-- Footer -->
     <footer class="footer-distributed">
       <div class="footer-center">
@@ -237,6 +260,8 @@
         </div>
       </div>
     </footer>  
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
