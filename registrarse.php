@@ -58,80 +58,102 @@
  <div class="container pt-5 ">
    <article class="header mt-5 ">
 
-<!-- Formulario de Contacto bin/contact_me.php -->
+
+<!-- Formulario de Contacto -->
       <div class="row">
-          <div class="col-lg-7 mx-auto">
-              <div class="card card-signin my-5 ">
-                  <div class="card-body"><h3 class="text-center">Registrarse</h3>
-            <hr class="my-4">
-            <form name="sentMessage" id="contactForm" novalidate>
-              <div class="control-group form-group">
-                <div class="controls">
-                  <label>Nombre y Apellido:</label>
-                  <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name." placeholder="Nombre y Apellido">
-                  <p class="help-block"></p>
+      <form class="form form-group col-lg-6 mx-auto" action="" method="post" enctype="multipart/form-data">
+
+
+<!-- Titulo -->
+        <div class="form-group">  
+        <div class="card card-signin my-5 ">              
+        <div class="card-body"><h3 class="text-center">Registrarse</h3>
+        <hr class="my-4">
+
+
+<!-- Casilleros -->
+          <form name="sentMessage" id="contactForm" novalidate>
+
+            <div class="form-group">
+              <div class="controls">
+                <label>Nombre y Apellido:</label>
+                <input type="text" class="form-control" id="name"  placeholder="Nombre y Apellido">
+                <p class="help-block"></p>
                 </div>
+            </div>
+          
+            <div class="form-group">
+              <div class="controls">
+                <label>Celular:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="+54 11">
               </div>
-              <div class="control-group form-group">
+            </div>
+
+            <div class="form-group">
+              <div class="controls">
+                <label>Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="example@example.com">
+              </div>
+            </div>
+
+            <div class="form-group">
                 <div class="controls">
-                  <label>Celular:</label>
-                  <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number." placeholder="+54 11">
+                  <label>CUIT/CUIL:</label>
+                  <input type="Cuit" class="form-control" id="cuit" placeholder="xx-xxxxxxxx-x">
                 </div>
-              </div>
-              <div class="control-group form-group">
+            </div>
+
+            <div class="form-group">
                 <div class="controls">
-                  <label>Email:</label>
-                  <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address." placeholder="example@example.com">
+                  <label>Dirección:</label>
+                  <input type="direccion" class="form-control" id="direccion" placeholder="Av. San Martin 123">
                 </div>
+            </div>
+
+            <div class="form-group">
+                <div class="controls">
+                  <label>Localidad:</label>
+                  <input type="localidad" class="form-control" id="localidad" placeholder="C.A.B.A.">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="controls">
+                  <label>Provincia:</label>
+                  <input type="provincia" class="form-control" id="provincia" placeholder="Buenos Aires">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="controls">
+                  <label>Usuario:</label>
+                  <input type="usuario" class="form-control" id="usuario" placeholder="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="controls">
+                  <label>Contraseña:</label>
+                  <input type="password" class="form-control" id="password" placeholder="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="controls">
+                  <label>Repetir Contraseña:</label>
+                  <input type="password" class="form-control" id="password" placeholder="">
+                </div>
+            </div>
+
+
+            <div id="success"></div>    
+            <button type="submit" class="btn" style="background-color: #338bca" id="sendMessageButton">Registrarse</button>
+            
+          </form>
               </div>
-              <div class="control-group form-group">
-                  <div class="controls">
-                    <label>CUIT/CUIL:</label>
-                    <input type="Cuit" class="form-control" id="cuit" required data-validation-required-message="No igresó la su CUIT/CUIL." placeholder="xx-xxxxxxxx-x">
-                  </div>
-              </div>
-              <div class="control-group form-group">
-                  <div class="controls">
-                    <label>Dirección:</label>
-                    <input type="direccion" class="form-control" id="direccion" required data-validation-required-message="No ingresó su Dirección." placeholder="Av. San Martin 123">
-                  </div>
-              </div>
-              <div class="control-group form-group">
-                  <div class="controls">
-                    <label>Localidad:</label>
-                    <input type="localidad" class="form-control" id="localidad" required data-validation-required-message="No ingresó su Localidad." placeholder="C.A.B.A.">
-                  </div>
-              </div>
-              <div class="control-group form-group">
-                  <div class="controls">
-                    <label>Provincia:</label>
-                    <input type="provincia" class="form-control" id="provincia" required data-validation-required-message="No igresó su Provincia." placeholder="Buenos Aires">
-                  </div>
-              </div>
-              <div class="control-group form-group">
-                  <div class="controls">
-                    <label>Usuario:</label>
-                    <input type="usuario" class="form-control" id="usuario" required data-validation-required-message="No ingresó su Usuario." placeholder="">
-                  </div>
-              </div>
-              <div class="control-group form-group">
-                  <div class="controls">
-                    <label>Contraseña:</label>
-                    <input type="password" class="form-control" id="password" required data-validation-required-message="No igresó su Passoword." placeholder="">
-                  </div>
-              </div>
-              <div class="control-group form-group">
-                  <div class="controls">
-                    <label>Repetir Contraseña:</label>
-                    <input type="password" class="form-control" id="password" required data-validation-required-message="Su Password no coincide." placeholder="">
-                  </div>
-              </div>
-              <div id="success"></div>    
-              <button type="submit" class="btn" style="background-color: #338bca" id="sendMessageButton">Registrarse</button>
-            </form>
-                  </div>
-          </div>
+            </div>
         </div>
+      </form>
       </div>
     </article>  
   </div>

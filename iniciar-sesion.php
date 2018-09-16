@@ -57,26 +57,33 @@
 <!-- Iniciar Sesion -->     
         <div class="container mt-5 pt-5">
           <div class="row">
-            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="col-sm-9 col-md-7 col-lg-6 mx-auto">
                 <div class="card card-signin my-5">
                 <div class="card-body">
+
+                <!-- Titulon -->
                   <h4 class="card-title text-center"><b>Iniciar Sesion</b></h4>
                   <hr class="my-4">
-                  <form class="form-signin"></form>
+                  
+                  <!-- Casilleros -->
+                  <form class="form form-group" action="" method="post">
                     <div class="form-label-group">
                       <label for="inputEmail">Email</label>
-                      <input type="email" id="inputEmail" class="form-control" placeholder="example@example.com" required autofocus>   
+                      <input type="email" id="inputEmail" class="form-control" placeholder="example@example.com">   
                     </div>
                     <br>
+
                     <div class="form-label-group">
                       <label for="inputPassword">Password</label>
-                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Password">
                     <br>
+
                     </div>
                     <div class="custom-control custom-checkbox mb-3">
                       <input type="checkbox" class="custom-control-input"  id="customCheck1">
                       <label class="custom-control-label" for="customCheck1">Recordar</label>
                     </div>
+
                     <button class="btn btn-lg btn-block" style="background-color: #338bca" type="submit">Ingresar</button>
                   </form>
                 </div>
