@@ -22,7 +22,7 @@
 <!-- Barra de navegacion -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
             <div class="container">
-            <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-01.png">              
+            <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-02.png">              
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button> 
@@ -58,13 +58,13 @@
     <!-- Preguntas Frecuentes -->
     <div class="container mt-5 pt-5">
         <article class="row">    
-            <div class="col-lg-7 mx-auto">
+            <div class="col-lg-8 mx-auto">
                 <div class="card card-signin my-5">
                     <div class="card-body">
                 <h4 class="pregFrec pt-5 pb-4 mb-4 text-black text-center"><b> Preguntas Frecuentes </b></h4>
                 <hr class="my-4">
                     <li type="none" class="preguntas py-4"><h5><b>¿Debo crearme una cuenta para comprar por la Tienda Online?</b></h5>
-                        <ul class="pt-3">Si, para poder realizar una compra por nuestra Tienda Online debes <a href= "registrarse.php">" Registrarse "</a></ul>
+                        <ul class="pt-3">Si, para poder realizar una compra por nuestra Tienda Online debes <a href= "registrarse.php">Registrarte</a></ul>
                     </li> 
                     <hr class="my-4">
                     <li type="none" class="preguntas py-4"><h5><b>¿Existe un mínimo para realizar la compra?</b></h5>
@@ -74,10 +74,10 @@
                     <li type="none" class="preguntas py-4"><h5><b>¿Cuales son los medios de pago?</b></h5></li>
                         <ul>Los medios de pago son:</ul> 
                             <ul class= "ml-5" type="square">
-                                <li class="pt-4 pb-4">Efectivo</li>
-                                <li class="pb-4">Depósito / Transferencia bancaria</li>
-                                <li class="pb-4">Tarjetas de Crédito</li>
-                                <li class="pb-4">Tarjetas de Débito</li>
+                                <ul type="none" class="items">Efectivo</li>
+                                <li type="none" >Tarjetas de Débito</li>
+                                <li type="none" >Tarjetas de Crédito</li>
+                                <li type="none" class= "pb-4" >Depósito / Transferencia bancaria</li>
                             </ul>  
                     <hr class="my-4">                      
                     <li type="none" class="preguntas py-4"><h5><b>¿Tienen local en donde se puede visitar y comprar?</b></h5>
@@ -87,10 +87,11 @@
                     <li type="none" class="preguntas py-4"><h5><b>¿Se realizan envíos?</b></h5></li>
                         <ul>Si, los envíos se pueden realizar por:</ul> 
                             <ul class= "ml-5" type="square">
-                                <li class="pt-4 pb-4">Correo a domicilio</li>
-                                <li class="pb-4">Mensajería</li>
-                                <li class="pb-4">Transporte / Expresso</li>
-                                <li class="pb-4">Micro a terminal</li>
+                                <li type="none" >Mensajería</li>
+                                <li type="none" >Micro a terminal</li>
+                                <li type="none" >Correo a domicilio</li>
+                                <li type="none" class="pb-4">Transporte / Expresso</li>
+
                             </ul> 
                         <ul class="pb-4"><strong> Atención: "Superando los $10.000.- los envíos son GRATIS !!!"</strong></ul>
                     <hr class="my-4">     

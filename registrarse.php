@@ -1,6 +1,13 @@
 <?php 
 
+require 'funciones.php';
 
+// SI llega algo por POST
+if($_POST) {
+
+  $errors = validate($_POST);
+
+}
 
 ?>
 
@@ -22,7 +29,7 @@
 <!-- Barra de navegacion -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
         <div class="container">
-          <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-01.png">              
+          <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-02.png">              
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> 
@@ -47,7 +54,7 @@
                     <a class="dropdown-item" style="color: #142430" href="">Hotel</a>
                     <a class="dropdown-item" style="color: #142430" href="">Cotillon</a>
                     <a class="dropdown-item" style="color: #142430" href="">Barra</a>
-                  </div>
+
               </li>                 
             </ul>
           </div>
@@ -70,82 +77,116 @@
         <div class="card-body"><h3 class="text-center">Registrarse</h3>
         <hr class="my-4">
 
-
 <!-- Casilleros -->
-          <form name="sentMessage" id="contactForm" novalidate>
+          <form name="sentMessage" id="contactForm">
 
-            <div class="form-group">
-              <div class="controls">
-                <label>Nombre y Apellido:</label>
-                <input type="text" class="form-control" id="name"  placeholder="Nombre y Apellido">
-                <p class="help-block"></p>
-                </div>
+<!-- nombre -->
+            <div class="form-group">             
+              <label>Nombre y Apellido</label>
+                <input type="text" name="nombre" class="form-control" id="nombre"  placeholder="Nombre y Apellido" value="<?=isset($errors['nombre']) ? "" : old('nombre'); ?>">
+                <?php if(isset($errors['nombre'])): ?>
+                        <div class="alert alert-primary">
+                            <strong><?=$errors['nombre']; ?></strong>
+                        </div>
+                    <?php endif;?> 
             </div>
-          
+            
+<!-- cel -->          
             <div class="form-group">
-              <div class="controls">
-                <label>Celular:</label>
-                <input type="tel" class="form-control" id="phone" placeholder="+54 11">
-              </div>
+              <label>Celular</label>
+                <input type="tel" name="cel" class="form-control" id="cel" placeholder="+54 11" valu="<?= isset($errors['cel']) ? "" : old('cel'); ?>">
+                <?php if(isset($errors['cel'])): ?>
+                    <div class="alert alert-primary">
+                        <strong><?=$errors['cel']; ?></strong>
+                    </div>
+                  <?php endif;?>
             </div>
 
+<!-- email --> 
             <div class="form-group">
-              <div class="controls">
-                <label>Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="example@example.com">
-              </div>
+                <label>Email</label>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="example@example.com" valu="<?= isset($errors['email']) ? "" : old('email'); ?>">
+                  <?php if(isset($errors['email'])): ?>
+                      <div class="alert alert-primary">
+                        <strong><?=$errors['email']; ?></strong>
+                      </div>
+                  <?php endif;?>
             </div>
 
+
+
+
+<!-- Seguir validando apartir de aca -->
+<!-- Seguir validando apartir de aca -->
+<!-- Seguir validando apartir de aca -->
+
+
+
+
+<!-- cuit -->
             <div class="form-group">
-                <div class="controls">
-                  <label>CUIT/CUIL:</label>
+                  <label>CUIT/CUIL</label>
                   <input type="Cuit" class="form-control" id="cuit" placeholder="xx-xxxxxxxx-x">
-                </div>
             </div>
 
+
+
+
+<!-- dire -->
             <div class="form-group">
-                <div class="controls">
-                  <label>Dirección:</label>
+                  <label>Dirección</label>
                   <input type="direccion" class="form-control" id="direccion" placeholder="Av. San Martin 123">
-                </div>
             </div>
 
+
+
+
+<!-- localidad -->
             <div class="form-group">
-                <div class="controls">
-                  <label>Localidad:</label>
+                  <label>Localidad</label>
                   <input type="localidad" class="form-control" id="localidad" placeholder="C.A.B.A.">
-                </div>
             </div>
 
+
+
+
+
+<!-- prov -->
             <div class="form-group">
-                <div class="controls">
-                  <label>Provincia:</label>
+                  <label>Provincia</label>
                   <input type="provincia" class="form-control" id="provincia" placeholder="Buenos Aires">
-                </div>
             </div>
 
+
+
+
+<!-- usuario -->
             <div class="form-group">
-                <div class="controls">
-                  <label>Usuario:</label>
+                  <label>Usuario</label>
                   <input type="usuario" class="form-control" id="usuario" placeholder="">
-                </div>
             </div>
 
+
+
+
+<!-- password -->
             <div class="form-group">
-                <div class="controls">
-                  <label>Contraseña:</label>
+                  <label>Contraseña</label>
                   <input type="password" class="form-control" id="password" placeholder="">
-                </div>
             </div>
 
+
+
+
+<!-- cpassword -->
             <div class="form-group">
-                <div class="controls">
-                  <label>Repetir Contraseña:</label>
+                  <label>Repetir Contraseña</label>
                   <input type="password" class="form-control" id="password" placeholder="">
-                </div>
             </div>
 
 
+
+<!-- Boton Enviar -->
             <div id="success"></div>    
             <button type="submit" class="btn" style="background-color: #338bca" id="sendMessageButton">Registrarse</button>
             

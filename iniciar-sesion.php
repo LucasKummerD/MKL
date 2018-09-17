@@ -21,7 +21,7 @@
 <!-- Barra de navegacion -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
       <div class="container">
-        <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-01.png">              
+        <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-02.png">              
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button> 
@@ -61,7 +61,7 @@
                 <div class="card card-signin my-5">
                 <div class="card-body">
 
-                <!-- Titulon -->
+                <!-- Titulo -->
                   <h4 class="card-title text-center"><b>Iniciar Sesion</b></h4>
                   <hr class="my-4">
                   

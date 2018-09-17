@@ -11,11 +11,11 @@ body {
   /*--------- Header-------------*/
 
  
-  .navbar-brand{
-	width: 230px;
-    float: left;
+	.navbar-brand{
+		width: 230px;
+		float: left;
 
-  }
+	}
 
   .carousel-item {
 	/* padding-top: 100px;*/
@@ -54,9 +54,9 @@ body {
 .btn {
 	color: white;
 	height: 50px;
-    width: 100px;
+    width: 30%;
     float: left;
-    border:50%;
+	border:50%;
     box-shadow: 0 0 1px #ccc;
     -webkit-transition-duration: 4s;
     -webkit-transition-timing-function: linear;
@@ -73,6 +73,8 @@ body {
 .lineas:hover {
   transform: scale(1.2px)
 }
+
+
 
 /* --------------------------------------------------FOOTER------------------------------------------------------*/
 
