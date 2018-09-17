@@ -65,11 +65,10 @@ if($_POST) {
  <div class="container pt-5 ">
    <article class="header mt-5 ">
 
-
-<!-- Formulario de Contacto -->
+<!------------------------------------- FORMULARIO DE CONTACTO ----------------------------------------->
+      
       <div class="row">
       <form class="form form-group col-lg-6 mx-auto" action="" method="post" enctype="multipart/form-data">
-
 
 <!-- Titulo -->
         <div class="form-group">  
@@ -85,7 +84,7 @@ if($_POST) {
               <label>Nombre y Apellido</label>
                 <input type="text" name="nombre" class="form-control" id="nombre"  placeholder="Nombre y Apellido" value="<?=isset($errors['nombre']) ? "" : old('nombre'); ?>">
                 <?php if(isset($errors['nombre'])): ?>
-                        <div class="alert alert-primary">
+                        <div class="alert alert-danger">
                             <strong><?=$errors['nombre']; ?></strong>
                         </div>
                     <?php endif;?> 
@@ -96,7 +95,7 @@ if($_POST) {
               <label>Celular</label>
                 <input type="tel" name="cel" class="form-control" id="cel" placeholder="+54 11" valu="<?= isset($errors['cel']) ? "" : old('cel'); ?>">
                 <?php if(isset($errors['cel'])): ?>
-                    <div class="alert alert-primary">
+                    <div class="alert alert-danger">
                         <strong><?=$errors['cel']; ?></strong>
                     </div>
                   <?php endif;?>
@@ -107,67 +106,69 @@ if($_POST) {
                 <label>Email</label>
                   <input type="email" name="email" class="form-control" id="email" placeholder="example@example.com" valu="<?= isset($errors['email']) ? "" : old('email'); ?>">
                   <?php if(isset($errors['email'])): ?>
-                      <div class="alert alert-primary">
+                      <div class="alert alert-danger">
                         <strong><?=$errors['email']; ?></strong>
                       </div>
                   <?php endif;?>
             </div>
 
-
-
-
-<!-- Seguir validando apartir de aca -->
-<!-- Seguir validando apartir de aca -->
-<!-- Seguir validando apartir de aca -->
-
-
-
-
-<!-- cuit -->
+ <!-- cuit -->
             <div class="form-group">
                   <label>CUIT/CUIL</label>
-                  <input type="Cuit" class="form-control" id="cuit" placeholder="xx-xxxxxxxx-x">
-            </div>
-
-
-
+                  <input type="cuit" class="form-control" id="cuit" placeholder="xx-xxxxxxxx-x" valu="<?= isset($errors['cuit']) ? "" : old('cuit'); ?>">
+                  <?php if(isset($errors['cuit'])): ?>
+                      <div class="alert alert-danger">
+                        <strong><?=$errors['cuit']; ?></strong>
+                      </div>
+                  <?php endif;?>
+           </div>
 
 <!-- dire -->
             <div class="form-group">
                   <label>Dirección</label>
-                  <input type="direccion" class="form-control" id="direccion" placeholder="Av. San Martin 123">
+                  <input type="direccion" class="form-control" id="direccion" placeholder="Av. San Martin 123" valu="<?= isset($errors['direccion']) ? "" : old('direccion'); ?>">
+                  <?php if(isset($errors['direccion'])): ?>
+                      <div class="alert alert-danger">
+                        <strong><?=$errors['direccion']; ?></strong>
+                      </div>
+                  <?php endif;?>
             </div>
-
-
-
 
 <!-- localidad -->
             <div class="form-group">
                   <label>Localidad</label>
-                  <input type="localidad" class="form-control" id="localidad" placeholder="C.A.B.A.">
+                  <input type="localidad" class="form-control" id="localidad" placeholder="C.A.B.A." valu="<?= isset($errors['localidad']) ? "" : old('localidad'); ?>">
+                  <?php if(isset($errors['localidad'])): ?>
+                      <div class="alert alert-danger">
+                        <strong><?=$errors['localidad']; ?></strong>
+                      </div>
+                  <?php endif;?>
             </div>
-
-
-
-
 
 <!-- prov -->
             <div class="form-group">
                   <label>Provincia</label>
-                  <input type="provincia" class="form-control" id="provincia" placeholder="Buenos Aires">
+                  <input type="provincia" class="form-control" id="provincia" placeholder="Buenos Aires" valu="<?= isset($errors['provincia']) ? "" : old('provincia'); ?>">
+                  <?php if(isset($errors['provincia'])): ?>
+                      <div class="alert alert-danger">
+                        <strong><?=$errors['provincia']; ?></strong>
+                      </div>
+                  <?php endif;?>
             </div>
-
-
-
 
 <!-- usuario -->
             <div class="form-group">
                   <label>Usuario</label>
-                  <input type="usuario" class="form-control" id="usuario" placeholder="">
+                  <input type="usuario" class="form-control" id="usuario" placeholder="" valu="<?= isset($errors['usuario']) ? "" : old('usuario'); ?>">
+                  <?php if(isset($errors['usuario'])): ?>
+                      <div class="alert alert-danger">
+                        <strong><?=$errors['usuario']; ?></strong>
+                      </div>
+                  <?php endif;?>
             </div>
 
 
-
+<!---------------------------------------FALTA SETEAR ESTO---------------------------------------------->
 
 <!-- password -->
             <div class="form-group">
@@ -175,16 +176,14 @@ if($_POST) {
                   <input type="password" class="form-control" id="password" placeholder="">
             </div>
 
-
-
-
 <!-- cpassword -->
             <div class="form-group">
                   <label>Repetir Contraseña</label>
                   <input type="password" class="form-control" id="password" placeholder="">
             </div>
 
-
+<!---------------------------------FIN DEL FORMULARIO-------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------->
 
 <!-- Boton Enviar -->
             <div id="success"></div>    
