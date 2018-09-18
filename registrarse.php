@@ -167,6 +167,33 @@ if($_POST) {
                   <?php endif;?>
             </div>
 
+
+
+
+
+
+
+
+<!-- imagen de perfil -->
+<!-------------------------------------------- LUCAS --------------------------------------------------->
+
+            <div class="form-group">
+                  <label>Foto de Perfil</label>
+                  <br>
+                  <input type="file" name="avatar" value="<?= isset($errors['avatar']) ? "" : old('avatar'); ?>" >
+                  <?php if(isset($errors['avatar'])): ?>
+                      <div class="alert alert-danger">
+                        <strong><?=$errors['avatar']; ?></strong>
+                      </div>
+                  <?php endif;?>
+            </div>
+<!-------------------------------------------- LUCAS --------------------------------------->
+
+
+
+
+
+
 <!-- password -->
             <div class="form-group">
                   <label>Contraseña</label>
@@ -193,8 +220,23 @@ if($_POST) {
                 <?php endif;?>
             </div>
 
-<!---------------------------------FIN DEL FORMULARIO-------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------->
+
+
+
+
+<!-------------------------------------------- LUCAS --------------------------------------->
+
+<!-- terminos y condiciones -->
+            <div class="form-group">
+                  <input type="checkbox" name="terminos" value="">
+                  <label>Acepto los terminos y condiciones.</label>
+            </div>
+
+<!-------------------------------------------- LUCAS --------------------------------------->
+
+
+
+
 
 <!-- Boton Enviar -->
             <div id="success"></div>    
@@ -209,6 +251,7 @@ if($_POST) {
     </article>  
   </div>
 
+<!---------------------------------FIN DEL FORMULARIO-------------------------------------------------->
 
 <!-- Footer -->
 <footer class="footer-distributed">

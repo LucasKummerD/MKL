@@ -58,7 +58,6 @@ function validate($data) {
         $errors['usuario'] = "Debes ingresar un Usuario";
     } 
 
-
 //Password y Cpassword    
     $password = trim($data['password']);
     $cpassword = trim($data['cpassword']);
@@ -73,14 +72,20 @@ function validate($data) {
         $errors['cpassword'] = "La contraseña no coincide";
     }
 
+//Terminos y condiciones  
+    if(!isset($data['terminos'])) {
+        $errors['terminos'] = "Debes aceptar terminos y condiciones";
+    }
+
+
 
     return  $errors;
 }
 
 
 
-
-
+//LUCAS
+//Ingresar el tema del avatar (Imagen Perfil)
 
 
 
