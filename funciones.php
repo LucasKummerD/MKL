@@ -64,7 +64,7 @@ function validate($data) {
     
     if($password == "") {
         $errors['password'] = "Debes ingresar una constraseña";
-    } elseif($password > 5 && $password < 9) {
+    } elseif(strlen($password) > 5 && (strlen($password) < 9)) {
         $errors['password'] = "La constraseña debe ser entre 6 y 8 caracteres";
     }
 
