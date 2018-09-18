@@ -30,35 +30,48 @@ function validate($data) {
 //Cuit
     $cuit = ($data['cuit']);
 
-        if($cel == "") {
+        if($cuit == "") {
             $errors['cuit'] = "Debes ingresar tu CUIT/CUIL";
        } 
 //Direccion
     $direccion = ($data['direccion']);
 
-    if($cel == "") {
+    if($direccion == "") {
         $errors['direccion'] = "Debes ingresar tu Dirección";
     } 
 //Localidad
     $localidad = ($data['localidad']);
 
-    if($cel == "") {
+    if($localidad == "") {
         $errors['localidad'] = "Debes ingresar tu Localidad";
     } 
 //Provincia
     $provincia = ($data['provincia']);
 
-    if($cel == "") {
+    if($provincia == "") {
         $errors['provincia'] = "Debes ingresar tu Provincia";
     } 
 //Usuario
-    $usuario = ($data['usuario']);
+    $usuario = trim($data['usuario']);
 
-    if($cel == "") {
+    if($usuario == "") {
         $errors['usuario'] = "Debes ingresar un Usuario";
     } 
 
 
+//Password y Cpassword    
+    $password = trim($data['password']);
+    $cpassword = trim($data['cpassword']);
+    
+    if($password == "") {
+        $errors['password'] = "Debes ingresar una constraseña";
+    } elseif($password > 5 && $password < 9) {
+        $errors['password'] = "La constraseña debe ser entre 6 y 8 caracteres";
+    }
+
+    if($password != $cpassword) {
+        $errors['cpassword'] = "La contraseña no coincide";
+    }
 
 
     return  $errors;

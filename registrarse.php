@@ -114,19 +114,19 @@ if($_POST) {
 
  <!-- cuit -->
             <div class="form-group">
-                  <label>CUIT/CUIL</label>
-                  <input type="cuit" class="form-control" id="cuit" placeholder="xx-xxxxxxxx-x" valu="<?= isset($errors['cuit']) ? "" : old('cuit'); ?>">
+                  <label>CUIT / CUIL</label>
+                  <input type="numeric" name="cuit" class="form-control" placeholder="30-71000000-1" id="cuit" valu="<?= isset($errors['cuit']) ? "" : old('cuit'); ?>">
                   <?php if(isset($errors['cuit'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['cuit']; ?></strong>
-                      </div>
+                      </div>  
                   <?php endif;?>
            </div>
 
-<!-- dire -->
+<!-- direccion -->
             <div class="form-group">
                   <label>Dirección</label>
-                  <input type="direccion" class="form-control" id="direccion" placeholder="Av. San Martin 123" valu="<?= isset($errors['direccion']) ? "" : old('direccion'); ?>">
+                  <input type="direccion" name="direccion" class="form-control" id="direccion" placeholder="Av. San Martin 123" valu="<?= isset($errors['direccion']) ? "" : old('direccion'); ?>">
                   <?php if(isset($errors['direccion'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['direccion']; ?></strong>
@@ -137,7 +137,7 @@ if($_POST) {
 <!-- localidad -->
             <div class="form-group">
                   <label>Localidad</label>
-                  <input type="localidad" class="form-control" id="localidad" placeholder="C.A.B.A." valu="<?= isset($errors['localidad']) ? "" : old('localidad'); ?>">
+                  <input type="localidad" name="localidad" class="form-control" id="localidad" placeholder="C.A.B.A." valu="<?= isset($errors['localidad']) ? "" : old('localidad'); ?>">
                   <?php if(isset($errors['localidad'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['localidad']; ?></strong>
@@ -148,7 +148,7 @@ if($_POST) {
 <!-- prov -->
             <div class="form-group">
                   <label>Provincia</label>
-                  <input type="provincia" class="form-control" id="provincia" placeholder="Buenos Aires" valu="<?= isset($errors['provincia']) ? "" : old('provincia'); ?>">
+                  <input type="provincia" name="provincia" class="form-control" id="provincia" placeholder="Buenos Aires" valu="<?= isset($errors['provincia']) ? "" : old('provincia'); ?>">
                   <?php if(isset($errors['provincia'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['provincia']; ?></strong>
@@ -159,7 +159,7 @@ if($_POST) {
 <!-- usuario -->
             <div class="form-group">
                   <label>Usuario</label>
-                  <input type="usuario" class="form-control" id="usuario" placeholder="" valu="<?= isset($errors['usuario']) ? "" : old('usuario'); ?>">
+                  <input type="usuario" name="usuario" class="form-control" id="usuario" placeholder="" valu="<?= isset($errors['usuario']) ? "" : old('usuario'); ?>">
                   <?php if(isset($errors['usuario'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['usuario']; ?></strong>
@@ -167,19 +167,30 @@ if($_POST) {
                   <?php endif;?>
             </div>
 
-
-<!---------------------------------------FALTA SETEAR ESTO---------------------------------------------->
-
 <!-- password -->
             <div class="form-group">
                   <label>Contraseña</label>
-                  <input type="password" class="form-control" id="password" placeholder="">
-            </div>
+                  <input type="password" name="password" class="form-control" id="password">
+                  <?php if(isset($errors['password'])): ?>
+                    <div class="alert alert-danger">
+                        <strong><?=$errors['password']; ?></strong>
+                    </div>
+                <?php elseif(isset($errors['cpassword'])): ?>
+                    <div class="alert alert-danger">
+                        <strong><?=$errors['cpassword']; ?></strong>
+                    </div>
+                <?php endif;?>
+                </div>
 
 <!-- cpassword -->
             <div class="form-group">
                   <label>Repetir Contraseña</label>
-                  <input type="password" class="form-control" id="password" placeholder="">
+                  <input type="password" name="cpassword" class="form-control" id="cpassword">
+                  <?php if(isset($errors['confirm'])): ?>
+                    <div class="alert alert-danger">
+                        <strong><?=$errors['confirm']; ?></strong>
+                    </div>
+                <?php endif;?>
             </div>
 
 <!---------------------------------FIN DEL FORMULARIO-------------------------------------------------->
