@@ -2,12 +2,26 @@
 
 require 'funciones.php';
 
-// SI llega algo por POST
+
 if($_POST) {
 
   $errors = validate($_POST);
 
+  $usuario = createUser($_POST);
+
+
+  if($_FILES['avatar']['error'] == 0) {
+    $avatarErrors = validateAvatar($_POST);
+   
+    $usuario['avatar'] = photoPath($_POST);
+
+    if(!empty($avatarErrors)) {
+        $errors = array_merge($errors, $avatarErrors); 
+    }
+  }
+
 }
+
 
 ?>
 
@@ -82,7 +96,7 @@ if($_POST) {
 <!-- nombre -->
             <div class="form-group">             
               <label>Nombre y Apellido</label>
-                <input type="text" name="nombre" class="form-control" id="nombre"  placeholder="Nombre y Apellido" value="<?=isset($errors['nombre']) ? "" : old('nombre'); ?>">
+                <input type="text" name="nombre" class="form-control"  placeholder="Nombre y Apellido" value="<?=isset($errors['nombre']) ? "" : old('nombre'); ?>">
                 <?php if(isset($errors['nombre'])): ?>
                         <div class="alert alert-danger">
                             <strong><?=$errors['nombre']; ?></strong>
@@ -93,7 +107,7 @@ if($_POST) {
 <!-- cel -->          
             <div class="form-group">
               <label>Celular</label>
-                <input type="tel" name="cel" class="form-control" id="cel" placeholder="+54 11" valu="<?= isset($errors['cel']) ? "" : old('cel'); ?>">
+                <input type="tel" name="cel" class="form-control" placeholder="+54 11" valu="<?= isset($errors['cel']) ? "" : old('cel'); ?>">
                 <?php if(isset($errors['cel'])): ?>
                     <div class="alert alert-danger">
                         <strong><?=$errors['cel']; ?></strong>
@@ -104,7 +118,7 @@ if($_POST) {
 <!-- email --> 
             <div class="form-group">
                 <label>Email</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="example@example.com" valu="<?= isset($errors['email']) ? "" : old('email'); ?>">
+                  <input type="email" name="email" class="form-control" placeholder="example@example.com" valu="<?= isset($errors['email']) ? "" : old('email'); ?>">
                   <?php if(isset($errors['email'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['email']; ?></strong>
@@ -115,7 +129,7 @@ if($_POST) {
  <!-- cuit -->
             <div class="form-group">
                   <label>CUIT / CUIL</label>
-                  <input type="numeric" name="cuit" class="form-control" placeholder="30-71000000-1" id="cuit" valu="<?= isset($errors['cuit']) ? "" : old('cuit'); ?>">
+                  <input type="numeric" name="cuit" class="form-control" placeholder="30-71000000-1" valu="<?= isset($errors['cuit']) ? "" : old('cuit'); ?>">
                   <?php if(isset($errors['cuit'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['cuit']; ?></strong>
@@ -126,7 +140,7 @@ if($_POST) {
 <!-- direccion -->
             <div class="form-group">
                   <label>Dirección</label>
-                  <input type="direccion" name="direccion" class="form-control" id="direccion" placeholder="Av. San Martin 123" valu="<?= isset($errors['direccion']) ? "" : old('direccion'); ?>">
+                  <input type="direccion" name="direccion" class="form-control" placeholder="Av. San Martin 123" valu="<?= isset($errors['direccion']) ? "" : old('direccion'); ?>">
                   <?php if(isset($errors['direccion'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['direccion']; ?></strong>
@@ -137,7 +151,7 @@ if($_POST) {
 <!-- localidad -->
             <div class="form-group">
                   <label>Localidad</label>
-                  <input type="localidad" name="localidad" class="form-control" id="localidad" placeholder="C.A.B.A." valu="<?= isset($errors['localidad']) ? "" : old('localidad'); ?>">
+                  <input type="localidad" name="localidad" class="form-control" placeholder="C.A.B.A." valu="<?= isset($errors['localidad']) ? "" : old('localidad'); ?>">
                   <?php if(isset($errors['localidad'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['localidad']; ?></strong>
@@ -148,7 +162,7 @@ if($_POST) {
 <!-- prov -->
             <div class="form-group">
                   <label>Provincia</label>
-                  <input type="provincia" name="provincia" class="form-control" id="provincia" placeholder="Buenos Aires" valu="<?= isset($errors['provincia']) ? "" : old('provincia'); ?>">
+                  <input type="provincia" name="provincia" class="form-control" placeholder="Buenos Aires" valu="<?= isset($errors['provincia']) ? "" : old('provincia'); ?>">
                   <?php if(isset($errors['provincia'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['provincia']; ?></strong>
@@ -159,7 +173,7 @@ if($_POST) {
 <!-- usuario -->
             <div class="form-group">
                   <label>Usuario</label>
-                  <input type="usuario" name="usuario" class="form-control" id="usuario" placeholder="" valu="<?= isset($errors['usuario']) ? "" : old('usuario'); ?>">
+                  <input type="usuario" name="usuario" class="form-control" placeholder="" valu="<?= isset($errors['usuario']) ? "" : old('usuario'); ?>">
                   <?php if(isset($errors['usuario'])): ?>
                       <div class="alert alert-danger">
                         <strong><?=$errors['usuario']; ?></strong>
@@ -167,37 +181,22 @@ if($_POST) {
                   <?php endif;?>
             </div>
 
-
-
-
-
-
-
-
 <!-- imagen de perfil -->
-<!-------------------------------------------- LUCAS --------------------------------------------------->
-
             <div class="form-group">
                   <label>Foto de Perfil</label>
                   <br>
-                  <input type="file" name="avatar" value="<?= isset($errors['avatar']) ? "" : old('avatar'); ?>" >
-                  <?php if(isset($errors['avatar'])): ?>
+                  <input type="file" name="avatar" value="<?= isset($errores['avatar']) ? "" : old('avatar'); ?>" >
+                  <?php if(isset($errores['avatar'])): ?>
                       <div class="alert alert-danger">
-                        <strong><?=$errors['avatar']; ?></strong>
+                        <strong><?=$errores['avatar']; ?></strong>
                       </div>
                   <?php endif;?>
             </div>
-<!-------------------------------------------- LUCAS --------------------------------------->
-
-
-
-
-
 
 <!-- password -->
             <div class="form-group">
                   <label>Contraseña</label>
-                  <input type="password" name="password" class="form-control" id="password">
+                  <input type="password" name="password" class="form-control">
                   <?php if(isset($errors['password'])): ?>
                     <div class="alert alert-danger">
                         <strong><?=$errors['password']; ?></strong>
@@ -212,7 +211,7 @@ if($_POST) {
 <!-- cpassword -->
             <div class="form-group">
                   <label>Repetir Contraseña</label>
-                  <input type="password" name="cpassword" class="form-control" id="cpassword">
+                  <input type="password" name="cpassword" class="form-control">
                   <?php if(isset($errors['confirm'])): ?>
                     <div class="alert alert-danger">
                         <strong><?=$errors['confirm']; ?></strong>
@@ -220,23 +219,11 @@ if($_POST) {
                 <?php endif;?>
             </div>
 
-
-
-
-
-<!-------------------------------------------- LUCAS --------------------------------------->
-
 <!-- terminos y condiciones -->
             <div class="form-group">
                   <input type="checkbox" name="terminos" value="">
                   <label>Acepto los terminos y condiciones.</label>
             </div>
-
-<!-------------------------------------------- LUCAS --------------------------------------->
-
-
-
-
 
 <!-- Boton Enviar -->
             <div id="success"></div>    

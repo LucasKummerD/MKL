@@ -1,5 +1,6 @@
 <?php 
 
+session_start();
 require 'helpers.php';
 
 //------------------------------------------Validaciones Formulario------------------------------------
@@ -77,19 +78,105 @@ function validate($data) {
         $errors['terminos'] = "Debes aceptar terminos y condiciones";
     }
 
-
-
     return  $errors;
 }
 
 
 
-//LUCAS
 //Ingresar el tema del avatar (Imagen Perfil)
 
+function validateAvatar($data) 
+{
+    $errores = [];
+
+    $usuario = $data["usuario"];
+
+    
+    if($_FILES["avatar"]["error"] == UPLOAD_ERR_OK) {  
+        $nombre = $_FILES["avatar"]["name"];
+        $archivo = $_FILES["avatar"]["tmp_name"];
+        
+        $ext = pathinfo($nombre, PATHINFO_EXTENSION);
+
+        if($ext != "jpg" && $ext != "png" && $ext != "jpeg") {
+            $errores["avatar"] = "Solo acepto formatos jpg y png";
+            return $errores;
+        }
+
+        $miArchivo = dirname(__FILE__);
+        $miArchivo = $miArchivo . "/img/";
+        $miArchivo = $miArchivo. "perfil" . $usuario . "." . $ext;
+        move_uploaded_file($archivo, $miArchivo);
+
+    } else {
+        $errores["avatar"] = "Hubo un error al procesar el archivo";
+    }
+    return $errores;
+}
 
 
 
+function photoPath($data)
+{
+    // Guardame el username en la variable $username
+    $usuario = $data["usuario"];
+    // Temporalmente, asigname a $nombre lo que llegue en $_FILES['avatar']['name]...
+    $nombre = $_FILES["avatar"]["name"];
+    // y haciendo uso de $nombre, asigna a $ext lo que devuelva la funcion pathinfo() a la cual
+    // le paso como parametro el mismo, y tambien la constante PATHINFO_EXTENSION
+    $ext = pathinfo($nombre, PATHINFO_EXTENSION);
+
+    //Generame una variable $miArchivo concatenando la palabra perfil, mas el username, mas un PUNTO, mas la EXTENSION...
+    $miArchivo = "perfil" . $username . "." . $ext;
+    // y devolvemelo
+    return $miArchivo;
+}
+
+
+
+// Crear Usuario
+
+
+function createUser($data) {
+
+    $usuario = [
+        'usuario' => $data['usuario'],
+        'email' => $data['email'],
+        'password' => password_hash($data['password'], PASSWORD_DEFAULT),
+        'role' => 1
+    ];
+
+    $usuario['id'] = idGenerate();
+
+    return $usuario;
+}   
+
+// ==================== CONSULTAR  ==================================
+// Crear Json 
+
+function idGenerate()
+{
+    $file = file_get_contents("users.json");
+
+    if($file == "") {
+        return 1;
+    }
+
+    $users = explode(PHP_EOL, $file);
+    array_pop($users);
+
+    $lastUser = $users[count($users) - 1];
+    $lastUser = json_decode($lastUser, true);
+
+    return $lastUser['id'] + 1;
+
+}
+
+function saveUser($user)
+{
+    $jsonUser = json_encode($user);
+    file_put_contents('users.json', $jsonUser . PHP_EOL, FILE_APPEND);
+}
 
 
 ?>
