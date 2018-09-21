@@ -103,7 +103,13 @@ if($_POST) {
                         </div>
                     <?php endif;?> 
             </div>
-            
+    
+<!-- sexo -->
+            <div class="form-group">
+              <label>Sexo</label><br>
+                <input type="radio" name="sexo" value="sexo1"><label for="sexo">Masculino</label><br>
+                <input type="radio" name="sexo" value="sexo2"><label for="sexo">Femenino</label>
+            </div>
 <!-- cel -->          
             <div class="form-group">
               <label>Celular</label>
