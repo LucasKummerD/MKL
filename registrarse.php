@@ -6,20 +6,21 @@ require 'funciones.php';
 if($_POST) {
 
   $errors = validate($_POST);
-
   $usuario = createUser($_POST);
-
 
   if($_FILES['avatar']['error'] == 0) {
     $avatarErrors = validateAvatar($_POST);
-   
     $usuario['avatar'] = photoPath($_POST);
 
     if(!empty($avatarErrors)) {
         $errors = array_merge($errors, $avatarErrors); 
-    }
+    }    
   }
-
+  
+  if(count($errors) == 0) {  
+    saveUser($usuario);
+    redirect('iniciar-sesion.php');
+  }
 }
 
 

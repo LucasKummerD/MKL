@@ -11,15 +11,15 @@ function validate($data) {
 //Nombre
     $nombre = trim($data['nombre']);
 
-        if($nombre == "") {
-        $errors['nombre'] = "Debes ingresar tu Nombre y Apellido";
+    if($nombre == "") {
+    $errors['nombre'] = "Debes ingresar tu Nombre y Apellido";
     }
 //Celular
     $cel = ($data['cel']);
 
-        if($cel == "") {
-            $errors['cel'] = "Debes ingresar tu Teléfono";
-       } 
+    if($cel == "") {
+        $errors['cel'] = "Debes ingresar tu Teléfono";
+    } 
 // Email
     $email = trim($data['email']);
 
@@ -31,9 +31,9 @@ function validate($data) {
 //Cuit
     $cuit = ($data['cuit']);
 
-        if($cuit == "") {
-            $errors['cuit'] = "Debes ingresar tu CUIT/CUIL";
-       } 
+    if($cuit == "") {
+        $errors['cuit'] = "Debes ingresar tu CUIT/CUIL";
+    } 
 //Direccion
     $direccion = ($data['direccion']);
 
@@ -65,7 +65,7 @@ function validate($data) {
     
     if($password == "") {
         $errors['password'] = "Debes ingresar una constraseña";
-    } elseif(strlen($password) > 5 && (strlen($password) < 9)) {
+    } elseif(strlen($password) > 3 && (strlen($password) < 9)) {
         $errors['password'] = "La constraseña debe ser entre 6 y 8 caracteres";
     }
 
@@ -85,10 +85,8 @@ function validate($data) {
 
 //Ingresar el tema del avatar (Imagen Perfil)
 
-function validateAvatar($data) 
-{
+function validateAvatar($data) {
     $errores = [];
-
     $usuario = $data["usuario"];
 
     
@@ -99,11 +97,11 @@ function validateAvatar($data)
         $ext = pathinfo($nombre, PATHINFO_EXTENSION);
 
         if($ext != "jpg" && $ext != "png" && $ext != "jpeg") {
-            $errores["avatar"] = "Solo acepto formatos jpg y png";
+            $errores["avatar"] = "Solo acepto formatos .jpg, .png o .jpeg";
             return $errores;
         }
 
-        $miArchivo = dirname(__FILE__);
+        $miArchivo = dirname(__FILE__);                                 
         $miArchivo = $miArchivo . "/img/";
         $miArchivo = $miArchivo. "perfil" . $usuario . "." . $ext;
         move_uploaded_file($archivo, $miArchivo);
@@ -114,28 +112,15 @@ function validateAvatar($data)
     return $errores;
 }
 
-
-
-function photoPath($data)
-{
-    // Guardame el username en la variable $username
+function photoPath($data) {
     $usuario = $data["usuario"];
-    // Temporalmente, asigname a $nombre lo que llegue en $_FILES['avatar']['name]...
     $nombre = $_FILES["avatar"]["name"];
-    // y haciendo uso de $nombre, asigna a $ext lo que devuelva la funcion pathinfo() a la cual
-    // le paso como parametro el mismo, y tambien la constante PATHINFO_EXTENSION
     $ext = pathinfo($nombre, PATHINFO_EXTENSION);
 
-    //Generame una variable $miArchivo concatenando la palabra perfil, mas el username, mas un PUNTO, mas la EXTENSION...
-    $miArchivo = "perfil" . $username . "." . $ext;
-    // y devolvemelo
+    $miArchivo = "perfil" . $usuario . "." . $ext;
+   
     return $miArchivo;
 }
-
-
-
-// Crear Usuario
-
 
 function createUser($data) {
 
@@ -151,12 +136,8 @@ function createUser($data) {
     return $usuario;
 }   
 
-// ==================== CONSULTAR  ==================================
-// Crear Json 
-
-function idGenerate()
-{
-    $file = file_get_contents("users.json");
+function idGenerate() {
+    $file = file_get_contents('data.txt');
 
     if($file == "") {
         return 1;
@@ -169,13 +150,23 @@ function idGenerate()
     $lastUser = json_decode($lastUser, true);
 
     return $lastUser['id'] + 1;
-
 }
 
-function saveUser($user)
-{
+function saveUser($user) {
     $jsonUser = json_encode($user);
     file_put_contents('users.json', $jsonUser . PHP_EOL, FILE_APPEND);
+}
+
+function dbConnect() {
+    $db = file_get_contents('users.json');
+    $arr = explode(PHP_EOL, $db);
+    array_pop($arr);
+
+    foreach($arr as $user) {
+        $usersArray[] = json_decode($user, true);
+    }
+
+    return $usersArray;
 }
 
 

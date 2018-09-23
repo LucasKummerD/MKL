@@ -1,22 +1,22 @@
-body {
+	body {
     padding-top: 30px;
-  }
+  	}
   
-  @media (min-width: 992px) {
-    body {
-      padding-top: 150px;
-    }
-  }
+  	@media (min-width: 992px) {
+    	body {
+      		padding-top: 150px;
+    	}
+ 	}
 
 /*------------------------------------------Header-----------------------------------------------------*/
 
-.navbar-brand{
+	.navbar-brand{
 		width: 230px;
 		float: left;
 
 	}
 
-  .carousel-item {
+  	.carousel-item {
 	/* padding-top: 100px;*/
     height: 600px;
     min-height: 250px;
@@ -25,7 +25,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+  	}
 /*----------------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------- PRODUCTOS DESTACADOS---------------------------------------- */
