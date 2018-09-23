@@ -66,7 +66,7 @@ function validate($data) {
     if($password == "") {
         $errors['password'] = "Debes ingresar una constraseña";
     } elseif(strlen($password) > 3 && (strlen($password) < 9)) {
-        $errors['password'] = "La constraseña debe ser entre 6 y 8 caracteres";
+        $errors['password'] = "La constraseña debe ser entre 4 y 8 caracteres";
     }
 
     if($password != $cpassword) {
@@ -137,7 +137,7 @@ function createUser($data) {
 }   
 
 function idGenerate() {
-    $file = file_get_contents('data.txt');
+    $file = file_get_contents('users.json');
 
     if($file == "") {
         return 1;

@@ -108,8 +108,10 @@ if($_POST) {
 <!-- sexo -->
             <div class="form-group">
               <label>Sexo</label><br>
-                <input type="radio" name="sexo" value="sexo1"><label for="sexo">Masculino</label><br>
-                <input type="radio" name="sexo" value="sexo2"><label for="sexo">Femenino</label>
+                <input class="m-2" type="radio" name="sexo" value="sexo1">
+                  <label class="mr-5" for="sexo">Masculino</label>
+                <input class="m-2" type="radio" name="sexo" value="sexo2">
+                  <label for="sexo">Femenino</label>
             </div>
 <!-- cel -->          
             <div class="form-group">
