@@ -2,6 +2,9 @@
 
 require 'funciones.php';
 
+if(check()) {
+  redirect('perfil.php');
+}
 
 if($_POST) {
 
@@ -97,21 +100,26 @@ if($_POST) {
 <!-- nombre -->
             <div class="form-group">             
               <label>Nombre y Apellido</label>
-                <input type="text" name="nombre" class="form-control"  placeholder="Nombre y Apellido" value="<?=isset($errors['nombre']) ? "" : old('nombre'); ?>">
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre y Apellido" value="<?=isset($errors['nombre']) ? "" : old('nombre'); ?>">
                 <?php if(isset($errors['nombre'])): ?>
-                        <div class="alert alert-danger">
-                            <strong><?=$errors['nombre']; ?></strong>
-                        </div>
-                    <?php endif;?> 
+                      <div class="alert alert-danger">
+                          <strong><?=$errors['nombre']; ?></strong>
+                      </div>
+                <?php endif;?> 
             </div>
     
 <!-- sexo -->
             <div class="form-group">
               <label>Sexo</label><br>
-                <input class="m-2" type="radio" name="sexo" value="sexo1">
+                <input class="m-2" type="radio" name="sexo" value=<?=isset($errors['sexo']) ? "" : old('sexo'); ?>>
                   <label class="mr-5" for="sexo">Masculino</label>
                 <input class="m-2" type="radio" name="sexo" value="sexo2">
                   <label for="sexo">Femenino</label>
+              <?php if(isset($errors['sexo'])): ?>
+                    <div class="alert alert-danger">
+                        <strong><?=$errors['sexo']; ?></strong>
+                    </div>
+              <?php endif;?> 
             </div>
 <!-- cel -->          
             <div class="form-group">
@@ -121,7 +129,7 @@ if($_POST) {
                     <div class="alert alert-danger">
                         <strong><?=$errors['cel']; ?></strong>
                     </div>
-                  <?php endif;?>
+                <?php endif;?>
             </div>
 
 <!-- email --> 
@@ -215,7 +223,7 @@ if($_POST) {
                         <strong><?=$errors['cpassword']; ?></strong>
                     </div>
                 <?php endif;?>
-                </div>
+            </div>
 
 <!-- cpassword -->
             <div class="form-group">

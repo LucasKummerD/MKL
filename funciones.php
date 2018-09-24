@@ -14,6 +14,13 @@ function validate($data) {
     if($nombre == "") {
     $errors['nombre'] = "Debes ingresar tu Nombre y Apellido";
     }
+
+//Sexo
+    if(!isset($data['sexo'])) {
+    $errors['sexo'] = "Debes seleccionar tu sexo";
+    }   
+
+
 //Celular
     $cel = ($data['cel']);
 
@@ -132,11 +139,12 @@ function createUser($data) {
     ];
 
     $usuario['id'] = idGenerate();
-
+    
     return $usuario;
 }   
 
-function idGenerate() {
+function idGenerate() 
+{
     $file = file_get_contents('users.json');
 
     if($file == "") {
@@ -152,7 +160,8 @@ function idGenerate() {
     return $lastUser['id'] + 1;
 }
 
-function saveUser($user) {
+function saveUser($user) 
+{
     $jsonUser = json_encode($user);
     file_put_contents('users.json', $jsonUser . PHP_EOL, FILE_APPEND);
 }
@@ -168,6 +177,7 @@ function dbConnect() {
 
     return $usersArray;
 }
+
 
 
 ?>

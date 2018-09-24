@@ -19,4 +19,17 @@ function redirect($url) {
     exit;
 }
 
+// Checkear si esta seteada la session
+function check()
+{
+    return isset($_SESSION['email']);
+}
+
+// Mostrar (o no) contenido a usuarios no registrados
+function guest()
+{
+    return !check();
+}
+
+
 ?>
