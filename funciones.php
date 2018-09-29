@@ -72,7 +72,7 @@ function validate($data) {
     
     if($password == "") {
         $errors['password'] = "Debes ingresar una constraseña";
-    } elseif(strlen($password) > 3 && (strlen($password) < 9)) {
+    } elseif(strlen($password) < 4 && (strlen($password) <= 8)) {
         $errors['password'] = "La constraseña debe ser entre 4 y 8 caracteres";
     }
 
@@ -128,14 +128,24 @@ function photoPath($data) {
    
     return $miArchivo;
 }
-
+// ESTO CAMBIE -------------------------------------------------------------------------------------------//
 function createUser($data) {
 
     $usuario = [
-        'usuario' => $data['usuario'],
+        'nombre' => $data['nombre'],
+        'sexo' => $data['sexo'],
         'email' => $data['email'],
+        'cel' => $data['cel'],
+        'cuit' => $data['cuit'],
+        'direccion' => $data['direccion'],
+        'localidad' => $data['localidad'],
+        'provincia' => $data['provincia'],
+        'avatar' => $data['avatar'],
+        'usuario' => $data['usuario'],
         'password' => password_hash($data['password'], PASSWORD_DEFAULT),
         'role' => 1
+// NO SE GUARDA LA SEGUNDA PASS
+//---------------------------------------------------------------------------------------------------------//
     ];
 
     $usuario['id'] = idGenerate();
@@ -143,8 +153,7 @@ function createUser($data) {
     return $usuario;
 }   
 
-function idGenerate() 
-{
+function idGenerate() {
     $file = file_get_contents('users.json');
 
     if($file == "") {
@@ -160,8 +169,7 @@ function idGenerate()
     return $lastUser['id'] + 1;
 }
 
-function saveUser($user) 
-{
+function saveUser($user) {
     $jsonUser = json_encode($user);
     file_put_contents('users.json', $jsonUser . PHP_EOL, FILE_APPEND);
 }
@@ -177,7 +185,5 @@ function dbConnect() {
 
     return $usersArray;
 }
-
-
 
 ?>

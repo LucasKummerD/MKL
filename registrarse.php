@@ -111,9 +111,9 @@ if($_POST) {
 <!-- sexo -->
             <div class="form-group">
               <label>Sexo</label><br>
-                <input class="m-2" type="radio" name="sexo" value=<?=isset($errors['sexo']) ? "" : old('sexo'); ?>>
+              <input class="m-2" type="radio" name="sexo" value="Masculino">
                   <label class="mr-5" for="sexo">Masculino</label>
-                <input class="m-2" type="radio" name="sexo" value="sexo2">
+                <input class="m-2" type="radio" name="sexo" value="Femenino">
                   <label for="sexo">Femenino</label>
               <?php if(isset($errors['sexo'])): ?>
                     <div class="alert alert-danger">
@@ -238,8 +238,8 @@ if($_POST) {
 
 <!-- terminos y condiciones -->
             <div class="form-group">
-                  <input type="checkbox" name="terminos" value="">
-                  <label>Acepto los terminos y condiciones.</label>
+                <input type="checkbox" name="terminos[]" value = "acepto" >
+                <label>Acepto los terminos y condiciones.</label>
             </div>
 
 <!-- Boton Enviar -->
