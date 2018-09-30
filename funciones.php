@@ -88,7 +88,7 @@ function validate($data) {
     return  $errors;
 }
 
-
+//---------------------------------------------------------------------------------------------------------------------------//
 
 //Ingresar el tema del avatar (Imagen Perfil)
 
@@ -128,7 +128,6 @@ function photoPath($data) {
    
     return $miArchivo;
 }
-// ESTO CAMBIE -------------------------------------------------------------------------------------------//
 function createUser($data) {
 
     $usuario = [
@@ -140,12 +139,9 @@ function createUser($data) {
         'direccion' => $data['direccion'],
         'localidad' => $data['localidad'],
         'provincia' => $data['provincia'],
-        'avatar' => $data['avatar'],
         'usuario' => $data['usuario'],
         'password' => password_hash($data['password'], PASSWORD_DEFAULT),
         'role' => 1
-// NO SE GUARDA LA SEGUNDA PASS
-//---------------------------------------------------------------------------------------------------------//
     ];
 
     $usuario['id'] = idGenerate();
@@ -185,5 +181,4 @@ function dbConnect() {
 
     return $usersArray;
 }
-
 ?>

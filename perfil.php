@@ -18,68 +18,69 @@
 //    }
 
 ?>  
+
 <!DOCTYPE html>
 <html>
-    <body>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>MKL Distribuidora</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+      <script src="main.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
 
-<!-- HAY QUE ACOMODAR TODO EL NAVBAR -->
-<!-- Barra de navegacion -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
-                <div class="container">
+  <body>
+  
+<!---------------------------------------------------- Barra de navegacion ---------------------------------------------------->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top" style="background-color: #338bca;">
+              <div class="container">
                 <img class="navbar-brand" alt="Logo-MKL" src="img/LOGO MKL-02.png">              
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span>
                 </button> 
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
+                  <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" style="color: rgb(179, 195, 228)" href="index1.php">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white" href="registrarse.php">Registrarse</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white" href="iniciar-sesion.php">Iniciar Sesion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white" href="preg-frec.php">Preguntas Frecuentes</a>
+                        <a class="nav-link" style="color: rgb(179, 195, 228)" href="index1.php">Perfil</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" style="color: white" href="#" id="lineas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lineas</a>
+                      <a class="nav-link dropdown-toggle" style="color: white" href="#" id="lineas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lineas</a>
                         <div class="dropdown-menu dropdown-menu-right" style="background-color: #4a9ad3" readonly aria-labelledby="lineas">
-                            <a class="dropdown-item" style="color: #142430" href="">Catering</a>
-                            <a class="dropdown-item" style="color: #142430" href="">Hotel</a>
-                            <a class="dropdown-item" style="color: #142430" href="">Cotillon</a>
-                            <a class="dropdown-item" style="color: #142430" href="">Barra</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Catering</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Hotel</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Cotillon</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Barra</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" style="color: white" href="#" id="configuracion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuracion</a>
+                        <div class="dropdown-menu dropdown-menu-right" style="background-color: #4a9ad3" readonly aria-labelledby="configuracion">
+                          <a class="dropdown-item" style="color: #142430" href="">Your Profile</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Cambio de contraseña</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Ayuda</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Registro de Actividades</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Seguridad</a>
+                          <a class="dropdown-item" style="color: #142430" href="">Cerrar Sesion</a>
                         </div>
                     </li>                 
-                    </ul>
+                  </ul>
                 </div>
             </div>
-        </nav>
-        <div class="container">
-            <?php if(guest()):?>
-            <div class="alert alert-danger" role="alert">
-                No estas autorizado en este sistema <a href="register.php" class="alert-link">Registrate!</a>
-            </div>
-            <?php else: ?>
-            <div class="row">
-                <div class="card col-4">
-                    <?php if(!isset($user['avatar'])):?>
-                    <img class="card-img-top" src="img/default.jpg" alt="avatar default">
-                    <?php else: ?>
-                    <img class="card-img-top" src="img/<?=$avatar?>" alt="avatar">
-                    <?php endif;?>
+      </nav>
+      <header>
+<!---------------------------------------------------- Contenido -------------------------------------------------------------->         
+<!------------------------------------------------------ Footer ---------------------------------------------------------------->
 
-                    
-                    <div class="card-body">
-                        <h5 class="card-title"><?="Bienvenido $username!" ?></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, adipisci.</p>
-                        <a href="#" class="btn btn-primary">Codea!</a>
-                    </div>
-                </div>
-            </div>
-            <?php endif; ?>
-        </div>        
-    </body>
+      <?php require 'footer.php'; ?>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+  </body>
 </html>
