@@ -146,7 +146,7 @@ function createUser($data) {
 
     $usuario['id'] = idGenerate();
     
-    return $usuario;
+    return $usuario ;
 }   
 
 function idGenerate() {
@@ -181,4 +181,36 @@ function dbConnect() {
 
     return $usersArray;
 }
+
+// Buscar por Mail 
+
+function dbEmailSearch($email)
+{
+    $users = dbConnect();
+    foreach($users as $user) {
+        if($user['email'] === $email) {
+            return $user;
+        }
+    }
+    return null;
+}
+
+
+function login($user)
+{
+    $_SESSION['email'] = $user['email'];
+    setcookie('email', $user['email'], time() + 3600 * 24 * 7, "/");
+}
+
+function logout()
+{
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+    session_destroy();
+    setcookie('email', null, time() -1);
+    redirect('registrarse.php');
+}
+
+
 ?>

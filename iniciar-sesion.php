@@ -2,6 +2,22 @@
 
 require 'funciones.php';
 
+if(check()) {
+  redirect('perfil.php');
+}
+
+if($_POST) {
+  $usuario = dbEmailSearch($_POST['email']);
+  if($usuario !== null) {
+      if(password_verify($_POST['password'], $usuario['password']) == true) {
+          login($usuario);
+          redirect('perfil.php');
+      } 
+  } 
+  
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -62,13 +78,13 @@ require 'funciones.php';
                       <form class="form form-group" action="" method="post">
                         <div class="form-label-group">
                           <label for="inputEmail">Email</label>
-                          <input type="email" id="inputEmail" class="form-control" placeholder="example@example.com">   
+                          <input type="email" name="email" id="inputEmail" class="form-control" placeholder="example@example.com">   
                         </div>
                         <br>
 
                         <div class="form-label-group">
                           <label for="inputPassword">Password</label>
-                          <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
                         <br>
 
                         </div>
@@ -89,7 +105,6 @@ require 'funciones.php';
 <!------------------------------------------------------------ Footer ---------------------------------------------------------->
 
       <?php require 'footer.php'; ?>
-
 
 
       <?php require 'script.php'; ?>
