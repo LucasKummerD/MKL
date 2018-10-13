@@ -8,6 +8,7 @@
     if(isset($_SESSION['email'])) {
         // buscame el usuario por mail y guardalo en $user (necesitamos usar los otros datos y solamente tenemos el email guardado en session!)
         $user = dbEmailSearch($_SESSION['email']);
+        $user = dbEmailSearch($_SESSION['avatar']);
         // asigname a $username el nombre de usuario
         $username = $user['usuario'];
         // Si tiene una foto de perfil, va a tener una key 'avatar' seteada...
@@ -68,7 +69,7 @@
                     <?php //si NO TIENE AVATAR ?>
                     <?php if(!isset($user['avatar'])):?>
                     <?php //si Cargame la imagen de d10s ?>
-                    <img class="card-img-top" src="img/default.jpg" alt="avatar default">
+                    <img class="card-img-top" src="img/user-silhouette.png" alt="avatar default">
                     <?php else: ?>
                     <?php // ELSE -----> cargame su avatar ?>
                     <img class="card-img-top" src="img/<?=$avatar?>" alt="avatar">

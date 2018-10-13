@@ -199,7 +199,9 @@ function dbEmailSearch($email)
 function login($user)
 {
     $_SESSION['email'] = $user['email'];
+    $_SESSION['avatar'] = $user['email'];
     setcookie('email', $user['email'], time() + 3600 * 24 * 7, "/");
+
 }
 
 function logout()
