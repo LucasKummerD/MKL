@@ -182,8 +182,6 @@ function dbConnect() {
     return $usersArray;
 }
 
-// Buscar por Mail 
-
 function dbEmailSearch($email)
 {
     $users = dbConnect();
