@@ -54,7 +54,7 @@
                 <div class="col-lg-8 mx-auto">
                     <div class="card card-signin my-5">
                         <div class="card-body">
-                    <h4 class="pregFrec pt-5 pb-4 mb-4 text-black text-center"><b> Preguntas Frecuentes </b></h4>
+                    <h4 class="pregFrec pt-5 pb-4 mb-4 text-black text-center">Preguntas Frecuentes</h4>
                     <hr class="my-4">
                         <li type="none" class="preguntas py-4"><h5><b>¿Debo crearme una cuenta para comprar por la Tienda Online?</b></h5>
                             <ul class="pt-3">Si, para poder realizar una compra por nuestra Tienda Online debes <a href= "registrarse.php">Registrarte</a></ul>
@@ -67,7 +67,7 @@
                         <li type="none" class="preguntas py-4"><h5><b>¿Cuales son los medios de pago?</b></h5></li>
                             <ul>Los medios de pago son:</ul> 
                                 <ul class= "ml-5" type="square">
-                                    <ul type="none" class="items">Efectivo</li>
+                                    <li type="none" class="items">Efectivo</li> 
                                     <li type="none" >Tarjetas de Débito</li>
                                     <li type="none" >Tarjetas de Crédito</li>
                                     <li type="none" class= "pb-4" >Depósito / Transferencia bancaria</li>

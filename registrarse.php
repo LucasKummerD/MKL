@@ -89,7 +89,7 @@ if($_POST) {
           <form name="sentMessage" id="contactForm">
 
 <!-- nombre -->
-            <div class="form-group">             
+            <div class="form-group col-lg-10 mx-auto">             
               <label>Nombre y Apellido</label>
                 <input type="text" name="nombre" class="form-control" placeholder="Nombre y Apellido" value="<?=isset($errors['nombre']) ? "" : old('nombre'); ?>">
                 <?php if(isset($errors['nombre'])): ?>
@@ -100,7 +100,7 @@ if($_POST) {
             </div>
     
 <!-- sexo -->
-            <div class="form-group">
+            <div class="form-group col-lg-10 mx-auto">
               <label>Sexo</label><br>
               <input class="m-2" type="radio" name="sexo" value="Masculino">
                   <label class="mr-5" for="sexo">Masculino</label>
@@ -113,7 +113,7 @@ if($_POST) {
               <?php endif;?> 
             </div>
 <!-- cel -->          
-            <div class="form-group">
+            <div class="form-group col-lg-10 mx-auto">
               <label>Celular</label>
                 <input type="tel" name="cel" class="form-control" placeholder="+54 11" valu="<?= isset($errors['cel']) ? "" : old('cel'); ?>">
                 <?php if(isset($errors['cel'])): ?>
@@ -124,7 +124,7 @@ if($_POST) {
             </div>
 
 <!-- email --> 
-            <div class="form-group">
+            <div class="form-group col-lg-10 mx-auto">
                 <label>Email</label>
                   <input type="email" name="email" class="form-control" placeholder="example@example.com" valu="<?= isset($errors['email']) ? "" : old('email'); ?>">
                   <?php if(isset($errors['email'])): ?>
@@ -134,52 +134,8 @@ if($_POST) {
                   <?php endif;?>
             </div>
 
- <!-- cuit -->
-            <div class="form-group">
-                  <label>CUIT / CUIL</label>
-                  <input type="numeric" name="cuit" class="form-control" placeholder="30-71000000-1" valu="<?= isset($errors['cuit']) ? "" : old('cuit'); ?>">
-                  <?php if(isset($errors['cuit'])): ?>
-                      <div class="alert alert-danger">
-                        <strong><?=$errors['cuit']; ?></strong>
-                      </div>  
-                  <?php endif;?>
-           </div>
-
-<!-- direccion -->
-            <div class="form-group">
-                  <label>Dirección</label>
-                  <input type="direccion" name="direccion" class="form-control" placeholder="Av. San Martin 123" valu="<?= isset($errors['direccion']) ? "" : old('direccion'); ?>">
-                  <?php if(isset($errors['direccion'])): ?>
-                      <div class="alert alert-danger">
-                        <strong><?=$errors['direccion']; ?></strong>
-                      </div>
-                  <?php endif;?>
-            </div>
-
-<!-- localidad -->
-            <div class="form-group">
-                  <label>Localidad</label>
-                  <input type="localidad" name="localidad" class="form-control" placeholder="C.A.B.A." valu="<?= isset($errors['localidad']) ? "" : old('localidad'); ?>">
-                  <?php if(isset($errors['localidad'])): ?>
-                      <div class="alert alert-danger">
-                        <strong><?=$errors['localidad']; ?></strong>
-                      </div>
-                  <?php endif;?>
-            </div>
-
-<!-- prov -->
-            <div class="form-group">
-                  <label>Provincia</label>
-                  <input type="provincia" name="provincia" class="form-control" placeholder="Buenos Aires" valu="<?= isset($errors['provincia']) ? "" : old('provincia'); ?>">
-                  <?php if(isset($errors['provincia'])): ?>
-                      <div class="alert alert-danger">
-                        <strong><?=$errors['provincia']; ?></strong>
-                      </div>
-                  <?php endif;?>
-            </div>
-
-<!-- usuario -->
-            <div class="form-group">
+ <!-- usuario -->
+            <div class="form-group col-lg-10 mx-auto">
                   <label>Usuario</label>
                   <input type="usuario" name="usuario" class="form-control" placeholder="" valu="<?= isset($errors['usuario']) ? "" : old('usuario'); ?>">
                   <?php if(isset($errors['usuario'])): ?>
@@ -190,7 +146,7 @@ if($_POST) {
             </div>
 
 <!-- imagen de perfil -->
-            <div class="form-group">
+            <div class="form-group col-lg-10 mx-auto">
                   <label>Foto de Perfil</label>
                   <br>
                   <input type="file" name="avatar" value="<?= isset($errores['avatar']) ? "" : old('avatar'); ?>" >
@@ -202,7 +158,7 @@ if($_POST) {
             </div>
 
 <!-- password -->
-            <div class="form-group">
+            <div class="form-group col-lg-10 mx-auto">
                   <label>Contraseña</label>
                   <input type="password" name="password" class="form-control">
                   <?php if(isset($errors['password'])): ?>
@@ -217,7 +173,7 @@ if($_POST) {
             </div>
 
 <!-- cpassword -->
-            <div class="form-group">
+            <div class="form-group col-lg-10 mx-auto">
                   <label>Repetir Contraseña</label>
                   <input type="password" name="cpassword" class="form-control">
                   <?php if(isset($errors['confirm'])): ?>
@@ -228,7 +184,7 @@ if($_POST) {
             </div>
 
 <!-- terminos y condiciones -->
-            <div class="form-group">
+            <div class="form-group col-lg-10 mx-auto">
                 <input type="checkbox" name="terminos[]" value = "acepto" >
                 <label>Acepto los terminos y condiciones.</label>
             </div>
