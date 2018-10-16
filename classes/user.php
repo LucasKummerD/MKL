@@ -3,7 +3,7 @@
 class User {
 
     private $nombre;
-    private $sexo           //SEXO ES UN RADIO, PERO EN LA BASE DE DATOS SE GUARDA COMO UN STRING COMO VA ENTONCES?
+    private $sexo          
     private $cel
     private $usuario;
     private $email;
@@ -20,8 +20,7 @@ class User {
             $this->password = $password;
             $this->avatar = $avatar;
     }
-
-//queda asi porque vamos a sacar cosas del formulario de registro, queda a modificar.    
+    
 
     public function getNombre() {
         return $this->nombre;
@@ -75,7 +74,7 @@ class User {
         return $this->avatar;
     }
 
-    public function setAvatar($avatar) {
+    public function setAvatar(String $avatar) {
         $this->avatar = $avatar;
     }
 
@@ -83,7 +82,7 @@ class User {
         return $this->role;
     }
 
-    public function setRole($role) {
+    public function setRole(Int $role) {
         $this->role = $role;
     }
 }

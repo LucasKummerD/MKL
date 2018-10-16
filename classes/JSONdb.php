@@ -68,7 +68,7 @@ class JSONdb extends Database {
         return $usuario ;
     }   
 
-// Funciones de Getter y Setter
+// Funciones de Getter y Setter ------------------------------------------------------------------------------------------
     
     public function getFile() {
         return $this->file;

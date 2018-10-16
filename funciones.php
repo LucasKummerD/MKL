@@ -9,6 +9,7 @@ require 'helpers.php';
 
 function validateAvatar($data) {
     $errores = [];
+    
     $usuario = $data["usuario"];
 
     
