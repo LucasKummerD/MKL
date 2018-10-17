@@ -1,6 +1,6 @@
 <?php
 
-class Validate {
+class Validacion {
     public static function emailValidate($email) {
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
@@ -52,13 +52,13 @@ class Validate {
             $errors['nombre'] = "Debes ingresar tu Nombre y Apellido";
         }
 //-----------------------------------------------------------------------------------------   
-        $sexo = $user->getSexo()
+        $sexo = $user->getSexo();
         
         if(!isset($data['sexo'])) {
             $errors['sexo'] = "Debes seleccionar tu sexo";
             } 
 //-----------------------------------------------------------------------------------------          
-        $cel = $user->getCel()
+        $cel = $user->getCel();
         
         $cel = ($data['cel']);
 

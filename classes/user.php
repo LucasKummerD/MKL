@@ -3,8 +3,8 @@
 class User {
 
     private $nombre;
-    private $sexo          
-    private $cel
+    private $sexo;          
+    private $cel;
     private $usuario;
     private $email;
     private $password;

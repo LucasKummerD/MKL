@@ -8,6 +8,6 @@ require 'classes/JSONdb.php';
 require 'classes/Validacion.php';
 
 $db = new JSONDB('users.json');
-Auth::set();
+Autenticacion::set();
 
 ?>
