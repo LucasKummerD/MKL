@@ -57,8 +57,8 @@ class JSONdb extends Database {
             'nombre' => $user -> getNombre(),
             'sexo' => $user -> getSexo(),
             'cel' => $user -> getCel(),
-            'email' => $user -> getEmail(),
             'usuario' => $user -> getusuario(),
+            'email' => $user -> getEmail(),
             'password' => password_hash($user -> getPassword(), PASSWORD_DEFAULT),
             'role' => $user -> getRole()
         ];

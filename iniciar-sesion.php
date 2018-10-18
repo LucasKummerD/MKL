@@ -1,22 +1,31 @@
 <?php 
 
-require 'funciones.php';
+//require 'funciones.php';
+require 'loader.php';
 
-if(check()) {
+if(Autenticacion::check()) {
   redirect('perfil.php');
 }
 
 if($_POST) {
-  $usuario = dbEmailSearch($_POST['email']);
-  if($usuario !== null) {
-      if(password_verify($_POST['password'], $usuario['password']) == true) {
-          login($usuario);
-          redirect('perfil.php');
-      } 
-  } 
-  
-}
+    $usuarioArray = $db->dbEmailSearch($_POST['email']);
+    $usuario = new User($usuarioArray['nombre'], $usuarioArray['cel'], $usuarioArray['usuario'], $usuarioArray['email'], $usuarioArray['password'], $usuarioArray['role']);
+    $arrayErr = [];
 
+
+    if($usuarioArray !== null) {
+      $error = "Email y/o password incorrectos";
+      
+      //HASTA ACA FUNCIONA SI FORZAMOS EL ERROR CON DATOS INCORRECTOS
+      var_dump($error);
+      exit;
+
+      //ACA TIRA EL ERROR
+      !Validacion::loginValidate($_POST['password']) ? $arrayErr['login'] = $error : Autenticacion::login($user);
+      redirect('perfil.php');
+      } 
+} 
+  
 
 ?>
 
@@ -64,6 +73,12 @@ if($_POST) {
       </nav>
 
 <!---------------------------------------------------Iniciar Sesion------------------------------------------------------------>     
+    <?php if(!empty($arrayErr)): ?>
+                <div class="alert alert-danger col-4">
+                    <strong><?=$arrayErr['login']; ?></strong>
+                </div>
+            <?php endif; ?>
+           
             <div class="container mt-5 pt-5">
               <div class="row">
                 <div class="col-sm-9 col-md-7 col-lg-6 mx-auto">

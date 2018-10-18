@@ -101,6 +101,8 @@ class Validacion {
     }
 //--------------------------------------------- FIN VALIDACION DEL FORMULARIO -------------------------------------------------
 
+//--------------------------------------------- VALIDACION DE LA PASS Y LOGIN -------------------------------------------------
+
     public static function passwordValidate($password, $objectPassword) {
         return password_verify($password, $objectPassword);
     }

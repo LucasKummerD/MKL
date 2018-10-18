@@ -16,7 +16,7 @@ if($_POST) {
 
 
     if($_FILES['avatar']['error'] == 0) {
-    $errors = $db->saveAvatar($_POST);
+    $errors = $db->validateAvatar($_POST);
     if(count($errors) === 0 ) {
         $avatar = $db->photopath($_POST);
         $usuario->setAvatar($avatar);
@@ -30,7 +30,7 @@ if($_POST) {
         redirect('login.php');
     }
 
-    $usuario = createUser($_POST);
+    //$usuario = createUser($_POST);
 
   }
 ?>

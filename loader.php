@@ -7,7 +7,7 @@ require 'classes/Autenticacion.php';
 require 'classes/JSONdb.php';
 require 'classes/Validacion.php';
 
-$db = new JSONDB('users.json');
+$db = new JSONdb('users.json');
 Autenticacion::set();
 
 ?>

@@ -11,9 +11,8 @@ class User {
     private $avatar;
     private $role = 1;
 
-    public function __construct(String $nombre, String $sexo, String $cel, String $usuario, String $email, String $password, String $avatar = null) {
+    public function __construct(String $nombre, String $cel, String $usuario, String $email, String $password, String $avatar) {
             $this->nombre = $nombre;    
-            $this->sexo = $sexo;
             $this->cel = $cel;
             $this->usuario = $usuario;
             $this->email = $email;
@@ -82,7 +81,7 @@ class User {
         return $this->role;
     }
 
-    public function setRole(Int $role) {
+    public function setRole(String $role) {
         $this->role = $role;
     }
 }
