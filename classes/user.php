@@ -11,13 +11,12 @@ class User {
     private $avatar;
     private $role = 1;
 
-    public function __construct(String $nombre, String $cel, String $usuario, String $email, String $password, String $avatar) {
+    public function __construct(String $nombre, String $cel, String $usuario, String $email, String $password) {
             $this->nombre = $nombre;    
             $this->cel = $cel;
             $this->usuario = $usuario;
             $this->email = $email;
             $this->password = $password;
-            $this->avatar = $avatar;
     }
     
 

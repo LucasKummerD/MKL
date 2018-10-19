@@ -7,8 +7,8 @@ class Validacion {
 //-----------------------------------------------------------------------------------------
     public static function validateAvatar($file) {
         $errores = [];
-        //$usuario = $data["usuario"];
-        //$file = $file->getAvatar();
+        $usuario = $data["usuario"];
+        $file = $file->getAvatar();
         
         if($_FILES["avatar"]["error"] == UPLOAD_ERR_OK) {  
             $nombre = $_FILES["avatar"]["name"];
